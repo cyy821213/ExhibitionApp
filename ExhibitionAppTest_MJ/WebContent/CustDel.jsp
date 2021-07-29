@@ -11,6 +11,6 @@
 	
 	int rs2 = pstmt.executeUpdate();
 	if(rs2 > 0){
-		out.println("<script>alert('"+delid+" 님을 탈퇴 처리 하였습니다.'); location.replace('Exhibition.jsp');</script>");
+		out.println("<script>alert('"+delid+" 님을 탈퇴 처리 하였습니다.'); location.replace('Customers.jsp');</script>");
 	}
 %>

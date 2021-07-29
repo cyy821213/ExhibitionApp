@@ -26,7 +26,7 @@ if(rs.next()){
       String docent = rs.getString("docent");
 %>
 <div class="col-md-12">
-<form action="ExhibitionModiProc.jsp" method="post" name="ExFrm<%=exidx%>">
+<form action="ExhibitionModiProc.jsp?exidx=<%=exidx %>" method="post" name="ExFrm<%=exidx%>">
 <table class="table">
 <tr class="active">
    <th>전시회고유코드</th>
@@ -61,7 +61,7 @@ if(rs.next()){
    <input type="text" name="placename" value="<%=placename %>" class="inputStyle"/></td>
    <td><input type="text" name="exprice" value="<%=exprice %>" class="inputStyle"/></td>
    <td><input type="date" name="sdate" value="<%=sdate %>" class="inputStyle"/></td>
-   <td><input type="date" name="" value="<%=edate %>" class="inputStyle"/></td>
+   <td><input type="date" name="edate" value="<%=edate %>" class="inputStyle"/></td>
    <td><input type="text" name="docent" value="<%=docent %>" class="inputStyle"/></td>
 </tr>
 <tr>
