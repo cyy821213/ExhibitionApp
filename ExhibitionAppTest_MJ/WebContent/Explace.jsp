@@ -36,7 +36,13 @@
 					<td><%=placename %></td>
 					<td><%=rlocation %></td>
 					<td><%=contactno %></td>
-					<td><%=times %></td>
+					<!-- 
+						times = s09e19
+								012345
+					
+					 -->
+					<td><%=times.substring(1, 3) %> 시~ <%=times.substring(4, 6) %> 까지</td> 
+					<!-- (1,3)=> 10 / (4,6)=> 17  (6-1 이어야 10이 된다???) -->
 					<td><%=holiday %></td>
 					<td>
 		<form action="ExplaceModiFrm.jsp" method="get">

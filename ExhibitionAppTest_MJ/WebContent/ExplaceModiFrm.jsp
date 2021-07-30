@@ -35,7 +35,7 @@
 		<tr>
 			<th>전시관 코드</th>
 			<td>
-				<h4 class="text-left"><%=codes %> <small class="text-danger">- 수정불가</small></h4>
+				<h4 class="text-danger"><%=codes %> <small class="text-danger">- 수정불가</small></h4>
 				<input type="hidden" value="<%=codes %>" name="codes" />
 			</td>
 		</tr>
@@ -46,7 +46,7 @@
 			</td>
 		</tr>
 		<tr>
-			<th>위치(수정불가)</th>
+			<th>위치</th>
 			<td>
 				<h4 class="text-left"><%=rslocation %> <small class="text-danger">- 수정불가</small></h4>
 				<input type="hidden" value="<%=rslocation %>" name="location" />
@@ -67,9 +67,18 @@
 			-> 입력을 할때 2개 입력폼 쓰셔야함. (s10e19 따로따로)
 			-> 시작시간 입력하는 필드,
 			-> 종료시간 입력하는 필드-->
-				<h4><%out.println(times.substring(1,3) + "시 ~ " + times.substring(4,6) + "까지"); %></h4>
-				OPEN : <input type="text" name="times1" class="form-control" value="<%=times.substring(1,3)%>s"/>
-				CLOSE : <input type="text" name="times1" class="form-control" value="<%=times.substring(4,6)%>e"/>
+				<h4 class="text-primary"> 
+				현재운영 시간 : <%out.println(times.substring(1,3) + "시 ~ " + times.substring(4,6) + "까지"); %></h4>
+				<div class="form-group form-inline">
+				OPEN : <input type="text" class="form-inline form-control" value="<%=times.substring(1,3)%>" name="n1" />
+				&nbsp;&nbsp;&nbsp;
+				CLOSE : <input type="text" class="form-inline form-control" value="<%=times.substring(4,6)%>" name="n2"/>
+				<!-- 
+					나중에 문자열하고 합해서 times 필드에 넣어줄것.
+					n1은 시작시간, n2는 종료시간
+					"s" +n1 == s10
+				 -->
+				</div> 
 			</td>
 		</tr>
 		<tr>
