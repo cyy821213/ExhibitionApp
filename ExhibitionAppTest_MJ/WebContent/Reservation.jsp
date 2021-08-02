@@ -35,18 +35,11 @@ if(rs.next()){
 </tr>
 <tr>
    <td colspan="2">
-   <input type="text" name="extitle" value="<%=extitle %>" class="inputStyle" readonly/>
-   </td>
-   <td>
-   <input type="text" name="genre" value="<%=genre %>" class="inputStyle" readonly/>
-   </td>
-   <td>
-   <input type="text" name="author" value="<%=author %>" class="inputStyle" readonly/>
-   </td>
-   <td>
-   <input type="text" name="rating" value="<%=rating %>" class="inputStyle" readonly/></td>
-   <td>
-   <input type="text" name="docent" value="<%=docent %>" class="inputStyle" readonly/></td>
+   <input type="text" name="extitle" value="<%=extitle %>" class="inputStyle" readonly/> </td>
+   <td><input type="text" name="genre" value="<%=genre %>" class="inputStyle" readonly/></td>
+   <td><input type="text" name="author" value="<%=author %>" class="inputStyle" readonly/></td>
+   <td><input type="text" name="rating" value="<%=rating %>" class="inputStyle" readonly/></td>
+   <td><input type="text" name="docent" value="<%=docent %>" class="inputStyle" readonly/></td>
 </tr>
 <tr class="active">
    <th colspan="2">전시장소 정보</th>
@@ -59,9 +52,14 @@ if(rs.next()){
    <td colspan="2">
    <input type="text" name="placename" value="<%=placename %>" class="inputStyle" readonly/></td>
    <td><input type="text" name="exprice" value="<%=exprice %>" class="inputStyle" readonly/></td>
-  <td><input type="date" name="sdate" value="<%=sdate %>" class="inputStyle"/></td>
-   <td><input type="number" name="tcnt" value="1" class="inputStyle"/></td>
-   <td><input type="text" name="payment" value="신용카드" class="inputStyle"/></td>
+   <td><input type="date" name="sdate" value="<%=sdate %>" class="form-control" /></td>
+   <td><input type="number" name="tcnt" value="1" class="form-control"/></td>
+   <td>
+   	<select name="payment" class="form-control">
+   		<option value="신용카드" >신용카드</option>
+   		<option value="계좌이체" >계좌이체</option>
+   	</select>
+   </td>
 </tr>
 <tr>
    <th colspan="1"  class="active">전시회 설명</th>
@@ -69,7 +67,7 @@ if(rs.next()){
       <textarea rows="4" name="texts" readonly><%=texts %></textarea>
    </td>
    <td colspan="2" class="ver">
-   <input type="submit" value="예매하기" class="btn btn-block btn-success"/>
+   <input type="submit" value="예매하기" class="btn btn-block btn-info style"/>
    </td>
 </tr>
 </table>
